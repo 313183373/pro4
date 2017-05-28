@@ -19,7 +19,7 @@ class Sequence {
     	return min;
   	}
 
-  	maximun(){
+  	maximum(){
   		var max=this.input[0];
     	for(let i=0;i<this.input.length;i++){
     		if(max<this.input[i]){
