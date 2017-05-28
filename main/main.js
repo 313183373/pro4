@@ -4,6 +4,9 @@ module.exports = function main() {
 };
 
 class Sequence {
+
+	var arr=[];
+	
 	constructor(input) {
 		this.arr=input;
 	}
