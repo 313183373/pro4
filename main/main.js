@@ -5,24 +5,24 @@ module.exports = function main() {
 
 class Sequence {
 	constructor(input) {
-		this.input=input;
+		this.arr=input;
 	}
 
 	minimum() {
-		var min=this.input[0];
-    	for(let i=0;i<this.input.length;i++){
-    		if(min>input[i]){
-    			min=input[i];
+		var min=this.arr[0];
+    	for(let i=0;i<this.arr.length;i++){
+    		if(min>arr[i]){
+    			min=arr[i];
     		}
     	}
     	return min;
   	}
 
   	maximun(){
-  		var max=this.input[0];
-    	for(let i=0;i<this.input.length;i++){
-    		if(max<input[i]){
-    			max=input[i];
+  		var max=this.arr[0];
+    	for(let i=0;i<this.arr.length;i++){
+    		if(max<arr[i]){
+    			max=arr[i];
     		}
     	}
     	return max;
@@ -30,10 +30,10 @@ class Sequence {
 
   	average(){
   		var sum=0;
-  		for(let i=0;i<this.input.length;i++){
-  			sum+=input[i];
+  		for(let i=0;i<this.arr.length;i++){
+  			sum+=arr[i];
   		}
-  		var aver=sum/this.input.length;
+  		var aver=sum/this.arr.length;
   		return aver.toFixed(2);
   	}
 }
