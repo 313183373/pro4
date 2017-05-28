@@ -1,31 +1,29 @@
 module.exports = function main() {
     let sequence = new Sequence([6, 9, 15, -2, 92, 11]);
-    console.log(`o) 最小值 = ${sequence.minimum()}\no) 最大值 = ${sequence.maximum()}\no) 平均值 = ${sequence.average()}`);
+    console.log(`o) 最小值 = ${sequence.minimum()}\no) 最大值 = ${sequence.maximum()}\no) 元素数量 = ${sequence.num()}\no) 平均值 = ${sequence.average()}`);
 };
 
 class Sequence {
 
-	var arr=[];
-	
 	constructor(input) {
-		this.arr=input;
+		this.input=input;
 	}
 
 	minimum() {
-		var min=this.arr[0];
-    	for(let i=0;i<this.arr.length;i++){
-    		if(min>arr[i]){
-    			min=arr[i];
+		var min=this.input[0];
+    	for(let i=0;i<this.input.length;i++){
+    		if(min>this.input[i]){
+    			min=this.input[i];
     		}
     	}
     	return min;
   	}
 
   	maximun(){
-  		var max=this.arr[0];
-    	for(let i=0;i<this.arr.length;i++){
-    		if(max<arr[i]){
-    			max=arr[i];
+  		var max=this.input[0];
+    	for(let i=0;i<this.input.length;i++){
+    		if(max<this.input[i]){
+    			max=this.input[i];
     		}
     	}
     	return max;
@@ -33,10 +31,14 @@ class Sequence {
 
   	average(){
   		var sum=0;
-  		for(let i=0;i<this.arr.length;i++){
-  			sum+=arr[i];
+  		for(let i=0;i<this.input.length;i++){
+  			sum+=this.input[i];
   		}
-  		var aver=sum/this.arr.length;
+  		var aver=sum/this.input.length;
   		return aver.toFixed(2);
+  	}
+
+  	num(){
+  		return this.input.length;
   	}
 }
